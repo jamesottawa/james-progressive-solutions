@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+/*
+ * Values below are measured directly from the approved reference image
+ * (public/images/hero/hero-final-bright.png, 1672x941). Where a comment
+ * cites coordinates, that is the pixel region the value was sampled from.
+ * Treat the reference as the source of truth for these.
+ */
+:root {
+  --border-subtle: rgba(22, 35, 62, 0.12);
+  --border-strong: rgba(22, 35, 62, 0.24);
+
+  /* Card + stats bar chrome, sampled from the reference's own cards */
+  --border-card: rgba(150, 122, 70, 0.22);
+  --shadow-card: 0 1px 2px rgba(60, 45, 20, 0.05), 0 14px 30px -18px rgba(60, 45, 20, 0.3);
+  --shadow-card-hover: 0 4px 10px rgba(60, 45, 20, 0.08), 0 22px 40px -18px rgba(176, 132, 40, 0.42);
+
+  /* Reference radii: cards ~15px, buttons ~7px, stats bar ~15px */
+  --radius-lg: 0.95rem;
+  --radius-md: 1rem;
+  --radius-sm: 0.44rem;
+
+  /* Reference gold button gradient (nav CTA bbox 1451,36 -> 1615,82) */
+  --gold-grad-from: #e0b45c;
+  --gold-grad-to: #c89838;
+
+  /* Category icon colours, sampled from the reference's five card icons */
+  --icon-tag: #ce9936;
+  --icon-app-from: #52bedc;
+  --icon-app-to: #2275cc;
+  --icon-globe: #a287d1;
+  --icon-hex: #021f44;
+  --icon-brain: #c08826;
+
+  /* Reference content column: x=90..1579 of 1672 => 1489px wide, 90px gutters */
+  --content-max: 1489px;
+
+  /*
+   * Outer frame = content column + 50px padding each side (1489 + 100).
+   * Containers use `max-w-[var(--content-frame)] lg:px-[50px]`, which gives
+   * 50px gutters from 1024px up (no edge clipping at 1280/1366/1440) and,
+   * at 1672px, an inner column of exactly 1489px sitting 92px from each
+   * edge — identical to the approved reference.
+   *
+   * Deliberately NOT `lg:px-[50px] min-[1589px]:px-0`: Tailwind v4 emits the
+   * arbitrary min-[1589px] media block before the lg block, so at equal
+   * specificity the lg rule wins and the padding is never removed.
+   */
+  --content-frame: 1589px;
+}
+
+@theme inline {
+  /* Sampled: page bg (12,12); card fill (250,700); stats fill (250,845) */
+  --color-cream: #fbf8f1;
+  --color-cream-deep: #f1e8d6;
+  --color-card: #fef8ed;
+  --color-stats: #fcf7ee;
+
+  /* Sampled: headline ink y181..252; headline gold word y325..396 */
+  --color-black: #080808;
+  --color-body: #43403a;
+  --color-navy: #16233e;
+  --color-navy-soft: #3a4a6b;
+  --color-gold: #c08820;
+  --color-gold-light: #e0b45c;
+  --color-gold-dark: #a8761c;
+
+  --font-sans: var(--font-geist-sans);
+  --font-display: var(--font-fraunces);
+  --font-mono: var(--font-geist-mono);
+
+  /*
+   * Reference H1 measures 92px with a 72px line-height (line tops at
+   * y=181/253/325 — an exact 72px rhythm). The clamp resolves to 92px at
+   * the 1672px target width and caps there.
+   */
+  --text-hero: clamp(2.75rem, 4.5vw + 1.05rem, 5.75rem);
+  --text-hero--line-height: 0.783;
+  --text-section: clamp(1.85rem, 1vw + 1.5rem, 2.5rem);
+  --text-section--line-height: 1.14;
+
+  /* Reference body: 3 lines on a 25px rhythm, ~17px type */
+  --text-lead: 1.0625rem;
+  --text-lead--line-height: 1.47;
+
+  /* Reference eyebrow: 10px cap height => ~13px letterspaced caps */
+  --text-eyebrow: 0.8125rem;
+  --text-eyebrow--line-height: 1.4;
+
+  /* Reference card title ~20px, card body ~14px on a 20px rhythm */
+  --text-card-title: 1.25rem;
+  --text-card-title--line-height: 1.2;
+  --text-card-body: 0.875rem;
+  --text-card-body--line-height: 1.45;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop {
+    border-color: var(--border-subtle);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-navy);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+@keyframes mobile-nav-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+ * Shared restrained entrance motion — a fade paired with a slight upward
+ * settle. Used on above-the-fold content that should be visible on first
+ * paint, not scroll-triggered. Reused wherever a section wants the same
+ * "arrive gently" feel (currently just the hero); keep call sites on
+ * `motion-safe:animate-[fade-up-in_...]` so prefers-reduced-motion is
+ * respected at the Tailwind level in addition to the blanket override
+ * below.
+ */
+@keyframes fade-up-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
