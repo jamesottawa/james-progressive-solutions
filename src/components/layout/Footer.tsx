@@ -1,73 +1,122 @@
 import Link from "next/link";
-import type { SVGProps } from "react";
 import { primaryNavItems } from "@/data/navigation";
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--border-subtle)] bg-cream-deep">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-14 sm:px-8 lg:flex-row lg:items-start lg:justify-between">
-        <div className="max-w-xs">
-          <p className="font-display text-lg font-semibold text-black">
-            James Progressive <span className="text-gold-dark">Solutions</span>
-          </p>
-          <p className="mt-3 text-sm leading-relaxed text-navy-soft">
-            Products, apps, websites, and AI creations, built and improved in public.
-          </p>
-        </div>
-
-        <nav aria-label="Footer" className="grid grid-cols-2 gap-x-10 gap-y-3 sm:grid-cols-3">
-          {primaryNavItems.map((item) => (
+    <footer className="border-t border-gold/20 bg-[#050914] text-white relative z-10">
+      <div className="mx-auto max-w-[var(--content-frame)] px-6 sm:px-8 lg:px-[50px] py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 lg:gap-16 items-start">
+          
+          {/* Brand Lockup & Short Description */}
+          <div className="md:col-span-5 flex flex-col gap-4">
             <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-navy transition-colors duration-150 hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+              href="/"
+              className="group flex items-center gap-2.5 w-fit focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             >
-              {item.label}
+              <span
+                aria-hidden="true"
+                className="flex h-6 w-6 shrink-0 items-center justify-center rounded border border-gold/40 bg-gold/10 font-display text-[0.65rem] font-bold tracking-tight text-gold-light transition-colors duration-200 group-hover:border-gold/70 group-hover:bg-gold/20"
+              >
+                PS
+              </span>
+              <span className="flex flex-col justify-center leading-none">
+                <span className="font-display text-[1.15rem] font-bold tracking-wider text-white uppercase transition-colors duration-200 group-hover:text-gold-light">
+                  JAMES
+                </span>
+                <span className="mt-1 text-[0.52rem] font-bold tracking-[0.26em] text-gold-light/90 uppercase">
+                  PROGRESSIVE SOLUTIONS
+                </span>
+              </span>
             </Link>
-          ))}
-        </nav>
 
-        <div className="flex flex-col gap-3">
-          <a
-            href="#"
-            aria-disabled="true"
-            className="inline-flex cursor-default items-center gap-2 text-sm font-medium text-navy-soft/70"
-          >
-            <CodeGlyph className="h-4 w-4" />
-            GitHub
-            <span className="sr-only">(coming soon)</span>
-          </a>
-          <Link
-            href="/about#contact"
-            className="text-sm font-medium text-navy transition-colors duration-150 hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-          >
-            Contact
-          </Link>
+            <p className="text-[0.875rem] text-gray-300 leading-relaxed max-w-sm">
+              Products, practical tools, modern websites, and AI creations — built in public to turn chaos into progress.
+            </p>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="md:col-span-4 grid grid-cols-2 gap-8">
+            <div>
+              <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-gold-light mb-4">
+                Navigation
+              </h4>
+              <ul className="flex flex-col gap-2.5">
+                {primaryNavItems.map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      href={item.href}
+                      className="text-[0.85rem] text-gray-300 font-medium transition-colors hover:text-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+                    >
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-gold-light mb-4">
+                Initiatives
+              </h4>
+              <ul className="flex flex-col gap-2.5 text-[0.85rem]">
+                <li>
+                  <Link href="/websites" className="text-gray-300 font-medium transition-colors hover:text-gold-light">
+                    Websites
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/clarity-project" className="text-gray-300 font-medium transition-colors hover:text-gold-light">
+                    CLarity Project
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/free-apps" className="text-gray-300 font-medium transition-colors hover:text-gold-light">
+                    Free Apps
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/ai-creations" className="text-gray-300 font-medium transition-colors hover:text-gold-light">
+                    AI Creations
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/for-sale" className="text-gray-300 font-medium transition-colors hover:text-gold-light">
+                    For Sale
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Action / Contact CTA */}
+          <div className="md:col-span-3 flex flex-col gap-4">
+            <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-gold-light">
+              Get In Touch
+            </h4>
+            <p className="text-[0.825rem] text-gray-300 leading-relaxed">
+              Interested in collaborating, redeveloping a website, or learning more about active projects?
+            </p>
+            <div className="flex flex-col gap-2.5 pt-1">
+              <Link
+                href="/about"
+                className="group inline-flex h-[42px] items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-5 text-[0.825rem] font-bold text-black shadow-md transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              >
+                Work With Us
+                <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+
         </div>
-      </div>
 
-      <div className="border-t border-[var(--border-subtle)] px-6 py-6 sm:px-8">
-        <p className="mx-auto max-w-6xl text-xs text-navy-soft">
-          © {new Date().getFullYear()} James Progressive Solutions.
-        </p>
+        {/* Bottom Copyright Bar */}
+        <div className="mt-14 pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[0.775rem] text-gray-400">
+          <p>© {new Date().getFullYear()} James Progressive Solutions. Built in public.</p>
+          <p className="text-gray-400">From chaos comes clarity.</p>
+        </div>
       </div>
     </footer>
-  );
-}
-
-function CodeGlyph(props: SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.5}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-      {...props}
-    >
-      <path d="M9 18 4 12l5-6M15 6l5 6-5 6" />
-    </svg>
   );
 }

@@ -1,31 +1,35 @@
 import Image from "next/image";
-import sceneNoEmblem from "../../../public/images/hero/james-hero-clean-plate-no-emblem.png";
+import sceneWireframesFilled from "../../../public/images/hero/james-hero-wireframes-filled.png";
 import psEmblem from "../../../public/images/hero/ps-emblem-clean.png";
 
 /*
- * Hero artwork using the final approved scene (Clean Plate version).
+ * Hero artwork using the final approved scene (Clean Plate version + Baked Wireframes).
  *
  * Architecture:
  * The target image is a full-bleed background across the entire Hero section.
  * We use object-cover within a constrained aspect-ratio container to perfectly 
  * match the 1672x941 reference coordinates without distortion.
  *
- * Note: This version of the image has all interactive UI (text, buttons, cards)
- * removed, allowing our HTML elements to sit cleanly on top without ghosting.
+ * STEP 1B: Hero Wireframe Content Baked Pass
+ * Wireframe content (AI brain, code brackets, website preview, tag, app grid) is baked
+ * directly into the background PNG asset (`james-hero-wireframes-filled.png`).
+ * All DOM-overlay wireframe elements have been removed.
  */
 export function HeroArtwork() {
   return (
     <div className="absolute inset-0 hidden lg:block -z-10 pointer-events-none" aria-hidden="true">
       <Image
-        src={sceneNoEmblem}
+        src={sceneWireframesFilled}
         alt=""
         placeholder="blur"
         priority
         fill
         className="object-cover object-center"
       />
+
+      {/* Standalone PS Emblem & Light Core Overlay (Preserved for Step 2 alignment) */}
       <div 
-        className="absolute top-[13.7%] left-[70.7%] w-[16%] aspect-square"
+        className="absolute top-[14.25%] left-[69.9%] w-[16%] aspect-square"
       >
         {/* Layer 1: Broader subtle radial light bloom */}
         <div 

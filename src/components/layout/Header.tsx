@@ -52,21 +52,21 @@ export function Header() {
         <div className="flex items-center gap-8">
           <Link
             href="/"
-            className="group flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            className="group flex items-center gap-2.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
             onClick={() => setIsMenuOpen(false)}
           >
             <span
               aria-hidden="true"
-              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/35 bg-gold/10 font-display text-[0.825rem] font-bold tracking-wider text-gold-dark transition-all duration-200 group-hover:border-gold/60 group-hover:bg-gold/20"
+              className="flex h-6 w-6 shrink-0 items-center justify-center rounded border border-gold/40 bg-gold/5 font-display text-[0.65rem] font-bold tracking-tight text-gold-dark transition-colors duration-200 group-hover:border-gold/70 group-hover:bg-gold/15"
             >
               PS
             </span>
-            <span className="flex flex-col leading-none">
-              <span className="font-display text-[1.25rem] font-semibold tracking-tight text-black transition-colors duration-200 group-hover:text-gold-dark">
-                James
+            <span className="flex flex-col justify-center leading-none">
+              <span className="font-display text-[1.15rem] font-bold tracking-wider text-black uppercase transition-colors duration-200 group-hover:text-gold-dark">
+                JAMES
               </span>
-              <span className="mt-1 text-[0.58rem] font-semibold tracking-[0.24em] text-gold-dark/90 uppercase">
-                Progressive Solutions
+              <span className="mt-1 text-[0.52rem] font-bold tracking-[0.26em] text-gold-dark/90 uppercase">
+                PROGRESSIVE SOLUTIONS
               </span>
             </span>
           </Link>

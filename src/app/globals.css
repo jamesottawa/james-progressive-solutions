@@ -94,21 +94,7 @@
   --text-card-title: 1.15rem;
   --text-card-title--line-height: 1.2;
   --text-card-body: 0.85rem;
-  --text-card-body--line-height: 1.45;
-
-  /* Floating Card Positions (Percentages based on 1672x941 reference) */
-  --card-ai-top: 24%;
-  --card-ai-left: 46.5%;
-  --card-free-top: 41%;
-  --card-free-left: 45.5%;
-  
-  --card-sale-top: 19%;
-  --card-sale-left: 86%;
-  --card-web-top: 36%;
-  --card-web-left: 78.5%;
-  --card-clarity-top: 51%;
-  --card-clarity-left: 73.5%;
-}
+  --text-card-body--line-height: 1.45;}
 
 @layer base {
   *,

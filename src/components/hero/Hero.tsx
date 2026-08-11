@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { HeroArtwork } from "./HeroArtwork";
 import { CategoryRibbon } from "@/components/home/CategoryRibbon";
+import { CategoryRibbonMobile } from "@/components/home/CategoryRibbonMobile";
 import sceneProduction from "../../../public/images/hero/james-hero-clean-plate-final.png";
 import { ReactNode } from "react";
 
@@ -12,8 +13,6 @@ import { ReactNode } from "react";
  * of the text and 5 category cards scale perfectly in sync with the artwork.
  * Capped at 1672px max-width to prevent absurd upscaling on ultrawides.
  */
-const SHOW_DESKTOP_FLOATING_CARDS = false;
-
 export function Hero() {
   return (
     <section 
@@ -73,60 +72,6 @@ export function Hero() {
             </div>
           </div>
 
-        {/* Desktop Absolute Category Cards (Temporarily hidden for hero evaluation pass) */}
-        {SHOW_DESKTOP_FLOATING_CARDS && (
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="relative w-full h-full pointer-events-auto">
-              <CategoryCard 
-                title="AI Creations" 
-                desc="Intelligent content built for impact." 
-                href="/ai-creations" 
-                top="var(--card-ai-top)" 
-                left="var(--card-ai-left)" 
-                icon={<BrainGlyph />} 
-              />
-              <CategoryCard 
-                title="Free Apps" 
-                desc="Tools designed to simplify your day." 
-                href="/free-apps" 
-                top="var(--card-free-top)" 
-                left="var(--card-free-left)" 
-                icon={<AppGlyph />} 
-              />
-              <CategoryCard 
-                title="For Sale" 
-                desc="Premium digital assets and more." 
-                href="/for-sale" 
-                top="var(--card-sale-top)" 
-                left="var(--card-sale-left)" 
-                icon={<TagGlyph />} 
-              />
-              <CategoryCard 
-                title="Website Redevelopment" 
-                desc="Modernize. Optimize. Outperform." 
-                href="/websites" 
-                top="var(--card-web-top)" 
-                left="var(--card-web-left)" 
-                icon={<ScreenGlyph />} 
-              />
-              <CategoryCard 
-                title="The CLarity Project" 
-                desc="Giving back through purpose and impact." 
-                href="/clarity-project" 
-                top="var(--card-clarity-top)" 
-                left="var(--card-clarity-left)" 
-                icon={<LogoGlyph />} 
-              />
-
-              {/* Ambient Nodes (overlaying background wireframes) */}
-              <AmbientNode top="18%" left="38%" icon={<CodeGlyph />} />
-              <AmbientNode top="35%" left="75%" icon={<SparkleGlyph />} />
-              <AmbientNode top="65%" left="86%" icon={<GridGlyph />} />
-              <AmbientNode top="52%" left="35%" icon={<NodeGlyph />} />
-            </div>
-          </div>
-        )}
-
         {/* Continuous Category Navigation Ribbon */}
         <CategoryRibbon />
       </div>
@@ -180,19 +125,13 @@ export function HeroMobile() {
           />
         </div>
         
-        <div className="mt-8 flex flex-col gap-4 pb-12">
-           <CategoryCardMobile title="AI Creations" desc="Intelligent content built for impact." href="/ai-creations" icon={<BrainGlyph />} />
-           <CategoryCardMobile title="Free Apps" desc="Tools designed to simplify your day." href="/free-apps" icon={<AppGlyph />} />
-           <CategoryCardMobile title="For Sale" desc="Premium digital assets and more." href="/for-sale" icon={<TagGlyph />} />
-           <CategoryCardMobile title="Website Redevelopment" desc="Modernize. Optimize. Outperform." href="/websites" icon={<ScreenGlyph />} />
-           <CategoryCardMobile title="The CLarity Project" desc="Giving back through purpose and impact." href="/clarity-project" icon={<LogoGlyph />} />
-        </div>
+        <CategoryRibbonMobile />
       </div>
     </section>
   );
 }
 
-function CategoryCard({ 
+export function CategoryCard({ 
   title, 
   desc, 
   href, 
@@ -224,7 +163,7 @@ function CategoryCard({
   );
 }
 
-function AmbientNode({ top, left, icon }: { top: string; left: string; icon: ReactNode }) {
+export function AmbientNode({ top, left, icon }: { top: string; left: string; icon: ReactNode }) {
   return (
     <div 
       className="absolute flex items-center justify-center w-6 h-6 text-gold/40 pointer-events-none"
@@ -236,7 +175,7 @@ function AmbientNode({ top, left, icon }: { top: string; left: string; icon: Rea
   );
 }
 
-function CategoryCardMobile({ title, desc, href, icon }: { title: string; desc: string; href: string; icon: ReactNode }) {
+export function CategoryCardMobile({ title, desc, href, icon }: { title: string; desc: string; href: string; icon: ReactNode }) {
   return (
     <Link 
       href={href}
@@ -338,7 +277,7 @@ function TargetGlyph() {
 }
 
 // Ambient Node Glyphs
-function CodeGlyph() {
+export function CodeGlyph() {
   return (
     <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <polyline points="16 18 22 12 16 6"></polyline>
@@ -347,7 +286,7 @@ function CodeGlyph() {
   );
 }
 
-function SparkleGlyph() {
+export function SparkleGlyph() {
   return (
     <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 3l1.912 5.813a2 2 0 001.275 1.275L21 12l-5.813 1.912a2 2 0 00-1.275 1.275L12 21l-1.912-5.813a2 2 0 00-1.275-1.275L3 12l5.813-1.912a2 2 0 001.275-1.275L12 3z"></path>
@@ -355,7 +294,7 @@ function SparkleGlyph() {
   );
 }
 
-function GridGlyph() {
+export function GridGlyph() {
   return (
     <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <rect x="3" y="3" width="7" height="7"></rect>
@@ -366,7 +305,7 @@ function GridGlyph() {
   );
 }
 
-function NodeGlyph() {
+export function NodeGlyph() {
   return (
     <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <circle cx="18" cy="5" r="3"></circle>
