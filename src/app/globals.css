@@ -61,6 +61,8 @@
   --color-body: #43403a;
   --color-navy: #16233e;
   --color-navy-soft: #3a4a6b;
+  --color-navy-dark: #0f1523; /* Dark navy for the floating cards */
+  --color-card-overlay: rgba(15, 21, 35, 0.95);
   --color-gold: #c08820;
   --color-gold-light: #e0b45c;
   --color-gold-dark: #a8761c;
@@ -73,9 +75,10 @@
    * Reference H1 measures 92px with a 72px line-height (line tops at
    * y=181/253/325 — an exact 72px rhythm). The clamp resolves to 92px at
    * the 1672px target width and caps there.
+   * Reduced max size by ~12% for viewport fit.
    */
-  --text-hero: clamp(2.75rem, 4.5vw + 1.05rem, 5.75rem);
-  --text-hero--line-height: 0.783;
+  --text-hero: clamp(2.2rem, 3.2vw + 0.5rem, 3.25rem);
+  --text-hero--line-height: 0.92;
   --text-section: clamp(1.85rem, 1vw + 1.5rem, 2.5rem);
   --text-section--line-height: 1.14;
 
@@ -88,10 +91,23 @@
   --text-eyebrow--line-height: 1.4;
 
   /* Reference card title ~20px, card body ~14px on a 20px rhythm */
-  --text-card-title: 1.25rem;
+  --text-card-title: 1.15rem;
   --text-card-title--line-height: 1.2;
-  --text-card-body: 0.875rem;
+  --text-card-body: 0.85rem;
   --text-card-body--line-height: 1.45;
+
+  /* Floating Card Positions (Percentages based on 1672x941 reference) */
+  --card-ai-top: 24%;
+  --card-ai-left: 46.5%;
+  --card-free-top: 41%;
+  --card-free-left: 45.5%;
+  
+  --card-sale-top: 19%;
+  --card-sale-left: 86%;
+  --card-web-top: 36%;
+  --card-web-left: 78.5%;
+  --card-clarity-top: 51%;
+  --card-clarity-left: 73.5%;
 }
 
 @layer base {

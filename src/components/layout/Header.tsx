@@ -47,50 +47,82 @@ export function Header() {
   }, [isMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 bg-cream/92 backdrop-blur">
-      <div className="mx-auto flex max-w-[1672px] items-center justify-between px-6 py-5 sm:px-8 lg:px-[50px] lg:py-6">
-        <Link
-          href="/"
-          className="group flex items-center gap-3.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          <span
-            aria-hidden="true"
-            className="font-display text-[1.9rem] leading-none font-semibold tracking-tight text-gold"
+    <header className="absolute top-0 left-0 w-full z-50 transition-colors bg-gradient-to-b from-white/40 to-transparent">
+      <div className="mx-auto flex max-w-[1672px] items-center justify-between px-6 py-2 sm:px-8 lg:px-[50px]">
+        <div className="flex items-center gap-8">
+          <Link
+            href="/"
+            className="group flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+            onClick={() => setIsMenuOpen(false)}
           >
-            PS
-          </span>
-          <span className="flex flex-col leading-none">
-            <span className="font-display text-[1.22rem] leading-none font-semibold tracking-tight text-black">
-              James
+            <span
+              aria-hidden="true"
+              className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-gold/35 bg-gold/10 font-display text-[0.825rem] font-bold tracking-wider text-gold-dark transition-all duration-200 group-hover:border-gold/60 group-hover:bg-gold/20"
+            >
+              PS
             </span>
-            <span className="mt-1.5 text-[0.6rem] leading-none font-medium tracking-[0.26em] text-body uppercase">
-              Progressive Solutions
+            <span className="flex flex-col leading-none">
+              <span className="font-display text-[1.25rem] font-semibold tracking-tight text-black transition-colors duration-200 group-hover:text-gold-dark">
+                James
+              </span>
+              <span className="mt-1 text-[0.58rem] font-semibold tracking-[0.24em] text-gold-dark/90 uppercase">
+                Progressive Solutions
+              </span>
             </span>
-          </span>
-        </Link>
+          </Link>
 
-        <nav aria-label="Primary" className="hidden lg:block">
-          <ul className="flex items-center gap-9">
-            {primaryNavItems.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  aria-current={isActiveRoute(pathname, item.href) ? "page" : undefined}
-                  className="relative inline-flex py-1.5 text-[0.95rem] font-medium text-black transition-colors duration-150 hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold aria-[current=page]:after:absolute aria-[current=page]:after:inset-x-0 aria-[current=page]:after:-bottom-0.5 aria-[current=page]:after:h-[2px] aria-[current=page]:after:rounded-full aria-[current=page]:after:bg-gold aria-[current=page]:after:content-['']"
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+          {/* Desktop Dropdown Trigger */}
+          <div className="hidden lg:block relative">
+            <button
+              type="button"
+              className="group flex items-center gap-2 text-[0.85rem] font-bold text-black uppercase tracking-wider transition-colors hover:text-gold-dark focus-visible:outline focus-visible:outline-gold"
+              onClick={() => setIsMenuOpen((open) => !open)}
+              aria-expanded={isMenuOpen}
+              aria-controls={menuId}
+            >
+              Menu
+              <svg className={`w-4 h-4 transition-transform duration-200 ${isMenuOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            
+            {/* Desktop Dropdown Panel */}
+            {isMenuOpen && (
+              <div 
+                id={menuId}
+                className="absolute top-full left-0 mt-4 w-[240px] bg-white border border-[var(--border-card)] shadow-xl rounded-[var(--radius-md)] py-2 motion-safe:animate-[fade-up-in_150ms_ease-out_both]"
+              >
+                <nav aria-label="Primary">
+                  <ul className="flex flex-col">
+                    {primaryNavItems.map((item) => (
+                      <li key={item.href}>
+                        <Link
+                          href={item.href}
+                          aria-current={isActiveRoute(pathname, item.href) ? "page" : undefined}
+                          className="flex items-center px-6 py-2.5 text-[0.9rem] font-medium text-black transition-colors hover:bg-gray-50 hover:text-gold-dark aria-[current=page]:text-gold-dark aria-[current=page]:bg-gold/5"
+                          onClick={() => setIsMenuOpen(false)}
+                        >
+                          {item.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </div>
+            )}
+          </div>
+        </div>
 
         <div className="flex items-center gap-3">
-
+          <Link
+            href="/clarity-project"
+            className="hidden lg:inline-flex items-center justify-center gap-2 font-semibold text-black transition-colors duration-150 hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gold"
+          >
+            Talk to CLarity &rarr;
+          </Link>
           <button
             type="button"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--border-card)] text-black transition-colors duration-150 hover:border-gold hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold lg:hidden"
+            className="inline-flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] border border-[var(--border-card)] text-black transition-colors duration-150 hover:border-gold hover:text-gold-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold lg:hidden"
             aria-expanded={isMenuOpen}
             aria-controls={menuId}
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -101,6 +133,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Mobile Menu Panel */}
       {isMenuOpen ? (
         <div id={menuId} className="border-t border-[var(--border-card)] bg-cream lg:hidden">
           <nav

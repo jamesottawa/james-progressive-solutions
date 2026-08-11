@@ -1,35 +1,53 @@
 import Image from "next/image";
-import sceneFinal from "../../../public/images/hero/hero-scene-final.png";
+import sceneNoEmblem from "../../../public/images/hero/james-hero-clean-plate-no-emblem.png";
+import psEmblem from "../../../public/images/hero/ps-emblem-clean.png";
 
 /*
- * Hero artwork using the final approved uncropped image.
+ * Hero artwork using the final approved scene (Clean Plate version).
  *
- * To prevent the baked-in UI on the left from conflicting with the live UI,
- * we strictly clip the image on the desktop layout using a right-aligned container.
- * The left 40% of the screen is rendered as empty cream, providing a clean
- * canvas for the live headline and CTAs.
+ * Architecture:
+ * The target image is a full-bleed background across the entire Hero section.
+ * We use object-cover within a constrained aspect-ratio container to perfectly 
+ * match the 1672x941 reference coordinates without distortion.
+ *
+ * Note: This version of the image has all interactive UI (text, buttons, cards)
+ * removed, allowing our HTML elements to sit cleanly on top without ghosting.
  */
 export function HeroArtwork() {
   return (
-    <div className="absolute inset-0 hidden overflow-hidden lg:block" aria-hidden="true">
-      {/* Container strictly covering the right portion to hide baked UI on the left.
-          Width is 60% so the crop boundary falls safely to the right of the baked text. */}
-      <div className="absolute inset-y-0 right-0 w-[60%] overflow-hidden">
+    <div className="absolute inset-0 hidden lg:block -z-10 pointer-events-none" aria-hidden="true">
+      <Image
+        src={sceneNoEmblem}
+        alt=""
+        placeholder="blur"
+        priority
+        fill
+        className="object-cover object-center"
+      />
+      <div 
+        className="absolute top-[13.7%] left-[70.7%] w-[16%] aspect-square"
+      >
+        {/* Layer 1: Broader subtle radial light bloom */}
+        <div 
+          className="absolute -inset-[40%] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,225,160,0.35)_0%,rgba(224,180,92,0.18)_40%,rgba(224,180,92,0.05)_65%,transparent_80%)] blur-2xl pointer-events-none" 
+          aria-hidden="true" 
+        />
+
+        {/* Layer 2: Inner warm core illumination */}
+        <div 
+          className="absolute -inset-[10%] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,245,210,0.5)_0%,rgba(224,180,92,0.25)_50%,transparent_75%)] blur-xl pointer-events-none" 
+          aria-hidden="true" 
+        />
+
+        {/* Layer 3: Standalone Emblem PNG with dual warm drop-shadows */}
         <Image
-          src={sceneFinal}
+          src={psEmblem}
           alt=""
-          placeholder="blur"
           priority
           fill
-          sizes="60vw"
-          className="object-cover object-[right_top]"
+          className="object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,220,130,0.4)] drop-shadow-[0_0_35px_rgba(224,180,92,0.25)]"
         />
-        {/* Soften the left crop edge into the cream background */}
-        <div className="absolute inset-y-0 left-0 w-[15%] bg-gradient-to-r from-cream via-cream/50 to-transparent" />
       </div>
-
-      {/* Soften bottom edge into the cream beneath the card row. */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-cream via-cream/60 to-transparent" />
     </div>
   );
 }
