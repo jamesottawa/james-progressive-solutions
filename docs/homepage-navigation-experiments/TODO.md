@@ -6,16 +6,16 @@
 - [x] Confirm current hero can be restored exactly
 
 ## PHASE 1 — CATEGORY DECK
-- [ ] Switch to `experiment/category-deck`
-- [ ] Remove floating cards from rendered desktop hero, preserving code if useful
-- [ ] Build anchored 5-category deck
-- [ ] Keep all 5 categories immediately visible
-- [ ] Give CLarity slightly stronger hierarchy
-- [ ] Verify desktop layout
-- [ ] Verify mobile fallback
-- [ ] Run build
-- [ ] Capture review screenshot
-- [ ] Record findings in `DECISIONS.md`
+- [x] Switch to `experiment/category-deck`
+- [x] Remove floating cards from rendered desktop hero, preserving code if useful
+- [x] Build anchored 5-category deck
+- [x] Keep all 5 categories immediately visible
+- [x] Give CLarity slightly stronger hierarchy
+- [x] Verify desktop layout
+- [x] Verify mobile fallback
+- [x] Run build
+- [x] Capture review screenshot
+- [x] Record findings in `DECISIONS.md`
 
 ## PHASE 2 — CONTINUOUS RIBBON
 - [ ] Switch to `experiment/category-ribbon`
