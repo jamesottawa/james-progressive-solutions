@@ -18,16 +18,16 @@
 - [x] Record findings in `DECISIONS.md`
 
 ## PHASE 2 — CONTINUOUS RIBBON
-- [ ] Switch to `experiment/category-ribbon`
-- [ ] Build single continuous category navigation band
-- [ ] Divide into 5 clickable category zones
-- [ ] Keep all 5 visible immediately
-- [ ] Explore restrained hover/focus behavior
-- [ ] Verify desktop layout
-- [ ] Verify mobile fallback
-- [ ] Run build
-- [ ] Capture review screenshot
-- [ ] Record findings in `DECISIONS.md`
+- [x] Switch to `experiment/category-ribbon`
+- [x] Build single continuous category navigation band
+- [x] Divide into 5 clickable category zones
+- [x] Keep all 5 visible immediately
+- [x] Explore restrained hover/focus behavior
+- [x] Verify desktop layout
+- [x] Verify mobile fallback
+- [x] Run build
+- [x] Capture review screenshot
+- [x] Record findings in `DECISIONS.md`
 
 ## PHASE 3 — PORTAL TILES
 - [ ] Switch to `experiment/portal-tiles`
