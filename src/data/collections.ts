@@ -69,7 +69,29 @@ export const forSaleItems: CollectionItem[] = [];
 export const freeAppItems: CollectionItem[] = [];
 
 /** Website rebuilds and redesigns, newest first. */
-export const websiteItems: WebsiteCaseStudy[] = [];
+export const websiteItems: WebsiteCaseStudy[] = [
+  {
+    title: "Brick Solid Masonry",
+    summary: "Bilingual service platform for Luc Quinn featuring straightforward masonry service presentations, mobile quote requests, and cross-links to specialized structural divisions.",
+    liveUrl: "https://brick-solid-masonry-preview.vercel.app",
+    href: "#brick-solid-masonry",
+    tags: ["Client: Luc Quinn", "Bilingual EN/FR", "Masonry Services", "Quote Funnel"],
+  },
+  {
+    title: "House Lifting Services",
+    summary: "Reassuring, homeowner-focused structural lifting platform explaining technical excavation, hydraulic elevation, and foundation extension without high-pressure sales.",
+    liveUrl: "https://brick-solid-house-lifting-preview.vercel.app",
+    href: "#house-lifting",
+    tags: ["Structural Elevation", "Homeowner Guide", "Process Breakdown", "Bilingual Support"],
+  },
+  {
+    title: "Foundation Repair Specialist",
+    summary: "Structural diagnostic and repair portal featuring a warning-sign index, technical process walkthroughs, grouped repair pathways, and responsive quote request flow.",
+    liveUrl: "https://foundation-repair-preview.vercel.app",
+    href: "#foundation-repair",
+    tags: ["Warning Signs Index", "Waterproofing & Crack Repair", "Technical Process", "Bilingual EN/FR"],
+  },
+];
 
 /** Experiments and tools built with and around AI. */
 export const aiCreationItems: CollectionItem[] = [];

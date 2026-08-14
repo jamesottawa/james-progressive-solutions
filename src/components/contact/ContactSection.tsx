@@ -4,7 +4,13 @@ import { ContactForm } from "./ContactForm";
  * Real contact section for the About page — replaces the footer's disabled
  * "Contact (coming soon)" link as the way to actually reach out.
  */
-export function ContactSection() {
+export function ContactSection({
+  heading = "Send a message.",
+  lead = "A name, an email to reply to, and what's on your mind — that's all this needs.",
+}: {
+  heading?: string;
+  lead?: string;
+} = {}) {
   return (
     <section
       id="contact"
@@ -16,10 +22,10 @@ export function ContactSection() {
           Get in Touch
         </p>
         <h2 id="contact-heading" className="mt-3 font-display text-section font-semibold text-black">
-          Send a message.
+          {heading}
         </h2>
         <p className="mt-4 max-w-[52ch] text-lead text-body">
-          A name, an email to reply to, and what&rsquo;s on your mind — that&rsquo;s all this needs.
+          {lead}
         </p>
 
         <ContactForm />

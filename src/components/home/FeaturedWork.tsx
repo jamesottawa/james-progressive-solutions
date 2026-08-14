@@ -127,13 +127,19 @@ export function FeaturedWork() {
                   </h3>
                 </div>
 
-                <p className="text-[0.875rem] text-gray-300 font-normal leading-relaxed mb-6">
-                  Modern website redesigns built for real businesses to improve performance, conversion, and brand presence.
+                <p className="text-[0.875rem] text-gray-300 font-normal leading-relaxed mb-4">
+                  Modern website redesigns built for real businesses — including a complete 3-site platform suite for Ottawa masonry contractor Luc Quinn.
                 </p>
+
+                <div className="mb-4">
+                  <span className="inline-flex items-center px-2.5 py-1 rounded bg-gold/10 border border-gold/30 text-[0.7rem] font-mono text-gold-light">
+                    Client: Luc Quinn · 3-Site Platform Suite
+                  </span>
+                </div>
               </div>
 
               <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-[0.825rem] font-semibold text-gold-light">
-                <span>View Redevelopment Work</span>
+                <span>Explore Case Studies</span>
                 <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
@@ -151,7 +157,7 @@ export function FeaturedWork() {
                     APPLICATIONS
                   </span>
                   <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.55rem] font-bold tracking-[0.16em] uppercase border bg-white/5 border-white/15 text-gray-400">
-                    GROWING COLLECTION
+                    5 LIVE APPS
                   </span>
                 </div>
 
@@ -170,7 +176,7 @@ export function FeaturedWork() {
               </div>
 
               <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-[0.825rem] font-semibold text-gold-light">
-                <span>Browse Free Tools</span>
+                <span>Browse 5 Free Tools</span>
                 <svg className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>

@@ -1,28 +1,23 @@
 import type { Metadata } from "next";
 import { PageLayout } from "@/components/layout/PageLayout";
 import { PageHero } from "@/components/layout/PageHero";
-import { CaseStudyGrid } from "@/components/collections/CaseStudyGrid";
-import { websiteItems } from "@/data/collections";
+import { WebsitesCaseStudies } from "@/components/websites/WebsitesCaseStudies";
 
 export const metadata: Metadata = {
   title: "Website Redevelopment — James Progressive Solutions",
-  description: "Modern websites that perform, convert, and represent your brand.",
+  description: "A small collection of client websites designed to make services clearer, improve trust, and give customers an easier path to get in touch.",
 };
 
 export default function WebsitesPage() {
   return (
     <PageLayout>
       <PageHero
-        eyebrow="Website Redevelopment"
-        title="Modern websites that"
-        accent="convert."
-        lead="Rebuilds and redesigns for existing business websites — faster, clearer, and built to represent the business properly."
+        eyebrow="WEBSITE REDEVELOPMENT"
+        title="Websites built around"
+        accent="the actual business."
+        lead="A small collection of client websites designed to make services clearer, improve trust, and give customers an easier path to get in touch."
       />
-      <CaseStudyGrid
-        items={websiteItems}
-        emptyHeadline="No redevelopment work published yet."
-        emptyBody="Completed rebuilds are added here with the client's agreement, so this page fills up more slowly than the work actually happens."
-      />
+      <WebsitesCaseStudies />
     </PageLayout>
   );
 }

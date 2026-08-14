@@ -3,7 +3,8 @@ import Link from "next/link";
 import { HeroArtwork } from "./HeroArtwork";
 import { CategoryRibbon } from "@/components/home/CategoryRibbon";
 import { CategoryRibbonMobile } from "@/components/home/CategoryRibbonMobile";
-import sceneProduction from "../../../public/images/hero/james-hero-clean-plate-final.png";
+import sceneWireframesFilled from "../../../public/images/hero/james-hero-wireframes-filled.png";
+import psEmblem from "../../../public/images/hero/ps-emblem-clean.png";
 import { ReactNode } from "react";
 
 /*
@@ -58,16 +59,10 @@ export function Hero() {
               </Link>
             </div>
             
-            {/* Trust Badges */}
-            <div className="mt-6 flex flex-row items-center gap-x-5 text-[0.75rem] font-semibold text-slate-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] whitespace-nowrap">
-              <span className="flex items-center gap-1.5">
-                <ShieldGlyph /> Secure & Reliable
-              </span>
+            {/* Trust Badge */}
+            <div className="mt-6 flex flex-row items-center text-[0.75rem] font-semibold text-slate-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] whitespace-nowrap">
               <span className="flex items-center gap-1.5">
                 <MapleGlyph /> Canadian Based
-              </span>
-              <span className="flex items-center gap-1.5">
-                <TargetGlyph /> Results Focused
               </span>
             </div>
           </div>
@@ -81,14 +76,14 @@ export function Hero() {
 
 export function HeroMobile() {
   return (
-    <section aria-labelledby="hero-heading-mobile" className="relative isolate lg:hidden">
+    <section aria-labelledby="hero-heading-mobile" className="relative isolate lg:hidden pt-16 sm:pt-20">
       {/* Mobile/Tablet Fallback Stack */}
-      <div className="mx-auto max-w-[var(--content-frame)] px-6 sm:px-8 mt-6">
-        <div className="pt-2 pb-6 motion-safe:animate-[fade-up-in_700ms_ease-out_both]">
-          <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold uppercase">
+      <div className="mx-auto max-w-[var(--content-frame)] px-6 sm:px-8">
+        <div className="pt-4 pb-6 motion-safe:animate-[fade-up-in_700ms_ease-out_both]">
+          <p className="text-eyebrow font-semibold tracking-[0.2em] text-gold uppercase">
             From Chaos Comes Clarity.
           </p>
-          <h1 id="hero-heading-mobile" className="mt-4 font-display text-[2.2rem] sm:text-[2.75rem] font-semibold text-black leading-[1.05] tracking-tight">
+          <h1 id="hero-heading-mobile" className="mt-3.5 font-display text-[2.2rem] sm:text-[2.75rem] font-semibold text-black leading-[1.05] tracking-tight">
             Clarity reveals.<br/>
             <span className="relative inline-block text-gold mt-1">
               <span className="absolute inset-0 bg-gold/10 blur-xl rounded-full -z-10 mix-blend-multiply" aria-hidden="true" />
@@ -98,33 +93,52 @@ export function HeroMobile() {
           <p className="mt-4 max-w-[420px] text-[0.9375rem] text-body/90 leading-[1.5]">
             AI solutions, practical tools, and thoughtful redevelopment built to turn ideas into progress.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+          <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
               href="/work"
-              className="group inline-flex h-[50px] whitespace-nowrap items-center justify-center gap-2.5 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-8 text-[0.95rem] font-bold text-black shadow-[0_4px_12px_rgba(192,136,32,0.25),inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_20px_rgba(192,136,32,0.4),inset_0_1px_0_rgba(255,255,255,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
+              className="group inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-6 text-[0.875rem] font-semibold text-black shadow-[0_3px_10px_rgba(192,136,32,0.2),inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(192,136,32,0.35),inset_0_1px_0_rgba(255,255,255,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
             >
               Explore Solutions
               <ArrowGlyph />
             </Link>
             <Link
               href="/about"
-              className="inline-flex h-[50px] whitespace-nowrap items-center justify-center gap-2.5 rounded-[var(--radius-md)] border-2 border-[var(--border-card)] bg-white/40 backdrop-blur-sm px-8 text-[0.95rem] font-bold text-black shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/80 hover:border-gold hover:text-gold-dark hover:shadow-[0_8px_20px_rgba(192,136,32,0.15)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+              className="inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] border border-[var(--border-card)] bg-white/50 backdrop-blur-sm px-6 text-[0.875rem] font-semibold text-black/90 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/85 hover:border-gold hover:text-gold-dark hover:shadow-[0_6px_16px_rgba(192,136,32,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               Work With Us
             </Link>
           </div>
+
+          {/* Trust Badge */}
+          <div className="mt-5 flex items-center text-[0.725rem] font-semibold text-slate-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
+            <span className="flex items-center gap-1.5">
+              <MapleGlyph /> Canadian Based
+            </span>
+          </div>
         </div>
 
-        <div className="overflow-hidden rounded-[var(--radius-lg)] shadow-[var(--shadow-card)] h-[280px] sm:h-[340px] relative">
+        {/* Artwork Card with final composite treatment */}
+        <div className="overflow-hidden rounded-[var(--radius-lg)] border border-gold/30 shadow-[var(--shadow-card)] h-[240px] sm:h-[320px] relative bg-[#070D1A]">
           <Image
-            src={sceneProduction}
-            alt="A figure at a multi-monitor desk, surrounded by a swirl of product, website and app cards rising into a golden vortex above a sunlit city."
+            src={sceneWireframesFilled}
+            alt="A figure at a multi-monitor desk, surrounded by product, website and app cards rising into a golden vortex above a sunlit city."
             placeholder="blur"
             fill
-            className="object-cover object-[center_bottom]"
+            className="object-cover object-[70%_25%]"
           />
+          {/* PS Emblem Core Overlay with radial bloom */}
+          <div className="absolute top-[10%] right-[10%] w-[24%] sm:w-[18%] aspect-square pointer-events-none" aria-hidden="true">
+            <div className="absolute -inset-[35%] rounded-full bg-[radial-gradient(circle_at_center,rgba(255,225,160,0.45)_0%,rgba(224,180,92,0.2)_50%,transparent_75%)] blur-xl" />
+            <Image
+              src={psEmblem}
+              alt=""
+              fill
+              className="object-contain relative z-10 drop-shadow-[0_0_15px_rgba(255,220,130,0.5)]"
+            />
+          </div>
         </div>
         
+        {/* Mobile Horizontal Snap Category Navigation */}
         <CategoryRibbonMobile />
       </div>
     </section>
@@ -250,28 +264,10 @@ export function LogoGlyph() {
   );
 }
 
-function ShieldGlyph() {
-  return (
-    <svg viewBox="0 0 24 24" className="w-4 h-4 text-gold/80" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-    </svg>
-  );
-}
-
 function MapleGlyph() {
   return (
     <svg viewBox="0 0 24 24" className="w-4 h-4 text-gold/80" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
       <path d="M12 2L9 9H5l3.5 4.5L7 20l5-3.5 5 3.5-1.5-6.5L19 9h-4L12 2z" />
-    </svg>
-  );
-}
-
-function TargetGlyph() {
-  return (
-    <svg viewBox="0 0 24 24" className="w-4 h-4 text-gold/80" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10" />
-      <circle cx="12" cy="12" r="6" />
-      <circle cx="12" cy="12" r="2" />
     </svg>
   );
 }

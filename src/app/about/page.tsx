@@ -1,60 +1,51 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageLayout } from "@/components/layout/PageLayout";
-import { PageHero } from "@/components/layout/PageHero";
-import { ContactSection } from "@/components/contact/ContactSection";
-import { categories } from "@/data/categories";
+import { AboutHeroIndex } from "@/components/about/AboutHeroIndex";
+import { AboutPageContent } from "@/components/about/AboutPageContent";
 
 export const metadata: Metadata = {
-  title: "About James — James Progressive Solutions",
-  description:
-    "James Progressive Solutions is where James shares the products, apps, websites, and AI experiments he is building, including the ongoing CLarity project.",
+  title: "About — James Progressive Solutions",
+  description: "James Progressive Solutions is a small, hands-on digital workshop focused on practical websites, web apps, AI experiments, and the ongoing development of CLarity.",
 };
 
+/**
+ * About page — uses a custom two-column hero in place of the generic PageHero
+ * so the full desktop width can be used: headline left, interactive editorial work index right.
+ * The PageHero component is intentionally not used here; it remains unchanged for
+ * all other routes.
+ */
 export default function AboutPage() {
   return (
     <PageLayout>
-      <PageHero
-        eyebrow="About James"
-        title="Built by James, in"
-        accent="public."
-        lead="James Progressive Solutions is where James shares the products, apps, websites, and AI experiments he is building, including the ongoing CLarity project. It is a running account of the work as it happens, not a finished portfolio."
-      />
+      {/* ── SECTION 1: ABOUT HERO ──────────────────────────────────────────── */}
+      <section className="border-b border-[var(--border-card)] bg-[#FAF6EE]">
+        <div className="mx-auto w-full max-w-[var(--content-frame)] px-6 py-10 sm:px-8 sm:py-12 lg:px-[50px] lg:py-14">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-end">
 
-      <section className="mx-auto w-full max-w-[var(--content-frame)] px-6 py-16 sm:px-8 lg:px-[50px] lg:py-20">
-        <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold uppercase">
-          Explore the Work
-        </p>
-        <h2 className="mt-3 font-display text-section font-semibold text-black">Where to start</h2>
-        <p className="mt-4 max-w-[60ch] text-lead text-body">
-          The work is organised into five areas. Each one fills up as things are finished rather
-          than announced, so some are further along than others.
-        </p>
+            {/* Left: headline block (7 cols) */}
+            <div className="lg:col-span-7 space-y-5 motion-safe:animate-[fade-up-in_600ms_ease-out_both]">
+              <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold uppercase">
+                About
+              </p>
+              <h1 className="font-display text-[clamp(1.95rem,2.6vw+1rem,3.25rem)] leading-[1.08] font-semibold text-black">
+                Built around{" "}
+                <span className="text-gold">solving problems.</span>
+              </h1>
+              <p className="max-w-[520px] text-lead text-body">
+                James Progressive Solutions is a small, hands-on digital workshop focused on practical websites, web apps, AI experiments, and the ongoing development of CLarity.
+              </p>
+            </div>
 
-        <ul className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {categories.map((category) => {
-            const Icon = category.icon;
-            return (
-              <li key={category.title}>
-                <Link
-                  href={category.href}
-                  className="group flex h-full gap-4 rounded-[var(--radius-lg)] border border-[var(--border-card)] bg-card p-6 shadow-[var(--shadow-card)] transition-all duration-200 ease-out hover:-translate-y-1 hover:border-gold/50 hover:shadow-[var(--shadow-card-hover)] focus-visible:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-                >
-                  <Icon className="h-[52px] w-[52px] shrink-0" />
-                  <span className="flex flex-col gap-1.5">
-                    <span className="font-display text-card-title font-semibold text-black">
-                      {category.title}
-                    </span>
-                    <span className="text-card-body text-body">{category.description}</span>
-                  </span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+            {/* Right: interactive editorial work index (5 cols) */}
+            <div className="lg:col-span-5 motion-safe:animate-[fade-up-in_700ms_ease-out_200ms_both]">
+              <AboutHeroIndex />
+            </div>
+
+          </div>
+        </div>
       </section>
 
-      <ContactSection />
+      <AboutPageContent />
     </PageLayout>
   );
 }

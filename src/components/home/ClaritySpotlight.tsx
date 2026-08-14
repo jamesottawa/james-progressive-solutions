@@ -30,7 +30,7 @@ export function ClaritySpotlight() {
     <section 
       id="clarity-spotlight" 
       aria-labelledby="clarity-spotlight-heading"
-      className="scroll-mt-24 border-t border-gold/20 bg-[#070d1a] py-16 sm:py-20 lg:py-28 text-white relative overflow-hidden"
+      className="scroll-mt-24 border-t border-gold/20 bg-[#070d1a] py-14 sm:py-16 lg:py-20 text-white relative overflow-hidden"
     >
       {/* Subtle Background Glow Accent */}
       <div 
@@ -39,34 +39,34 @@ export function ClaritySpotlight() {
       />
 
       <div className="mx-auto max-w-[var(--content-frame)] px-6 sm:px-8 lg:px-[50px] relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
           
           {/* Left Column: Copy, Points & CTA */}
           <div className="lg:col-span-7">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/35 text-gold-light text-[0.68rem] font-bold tracking-[0.2em] uppercase mb-6">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/15 border border-gold/35 text-gold-light text-[0.68rem] font-bold tracking-[0.2em] uppercase mb-5">
               <span className="w-2 h-2 rounded-full bg-gold animate-pulse" aria-hidden="true" />
-              Flagship Project
+              Problem-Solving Core
             </div>
 
-            <h2 id="clarity-spotlight-heading" className="font-display text-[2rem] sm:text-[2.65rem] font-semibold text-white leading-[1.08] tracking-tight">
-              CLarity is being built to bring order to complex situations.
+            <h2 id="clarity-spotlight-heading" className="font-display text-[2rem] sm:text-[2.5rem] font-semibold text-white leading-[1.1] tracking-tight">
+              CLarity is being built to turn scattered facts into organized progress.
             </h2>
 
-            <p className="mt-5 text-[1.025rem] text-gray-300 font-normal leading-relaxed max-w-2xl">
-              CLarity is an ongoing application project focused on helping people organize scattered information, understand what matters, and move toward clearer next steps.
+            <p className="mt-4 text-[0.95rem] sm:text-[1rem] text-gray-300 font-normal leading-relaxed max-w-2xl">
+              A structured workspace engineered to map dependencies, surface information gaps, and preserve working context as projects evolve over time.
             </p>
 
             {/* 4 Supporting Points Grid */}
-            <div className="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-6 pt-6 border-t border-white/10">
+            <div className="mt-7 grid grid-cols-1 sm:grid-cols-2 gap-5 pt-5 border-t border-white/10">
               {spotlightPoints.map((pt, idx) => (
-                <div key={pt.title} className="flex flex-col gap-1.5">
-                  <div className="flex items-center gap-2 font-semibold text-white text-[0.925rem]">
+                <div key={pt.title} className="flex flex-col gap-1">
+                  <div className="flex items-center gap-2 font-semibold text-white text-[0.9rem]">
                     <span className="flex items-center justify-center w-5 h-5 rounded-full bg-gold/20 text-gold-light text-[0.65rem] font-bold shrink-0">
                       {idx + 1}
                     </span>
                     {pt.title}
                   </div>
-                  <p className="text-[0.825rem] text-gray-400 leading-normal pl-7">
+                  <p className="text-[0.8rem] text-gray-400 leading-normal pl-7">
                     {pt.desc}
                   </p>
                 </div>
@@ -74,10 +74,10 @@ export function ClaritySpotlight() {
             </div>
 
             {/* Primary CTA */}
-            <div className="mt-10 pt-4 flex items-center gap-4">
+            <div className="mt-8 pt-2 flex items-center gap-4">
               <Link
                 href="/clarity-project"
-                className="group inline-flex h-[50px] items-center justify-center gap-3 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-8 text-[0.925rem] font-bold text-black shadow-[0_4px_20px_rgba(192,136,32,0.25),inset_0_1px_0_rgba(255,255,255,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(192,136,32,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
+                className="group inline-flex h-[48px] items-center justify-center gap-2.5 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-7 text-[0.875rem] font-bold text-black shadow-[0_4px_20px_rgba(192,136,32,0.25),inset_0_1px_0_rgba(255,255,255,0.4)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(192,136,32,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
               >
                 Explore the CLarity Project
                 <svg 
