@@ -26,21 +26,21 @@ export function Hero() {
       <div className="absolute inset-0 z-10 w-full h-full">
         
         {/* Left Side: Main Text content */}
-        <div className="absolute top-[13%] left-[6%] w-[46%] max-w-[660px] pt-2 motion-safe:animate-[fade-up-in_700ms_ease-out_both]">
-            <p className="text-eyebrow font-semibold tracking-[0.2em] text-gold uppercase">
+        <div className="absolute top-[13%] left-[6%] w-[46%] max-w-[660px] pt-2 motion-safe:animate-[fade-up-in_350ms_ease-out_both]">
+            <p className="text-eyebrow font-semibold tracking-[0.2em] text-gold-dark uppercase">
               From Chaos Comes Clarity.
             </p>
 
             <h1 id="hero-heading" className="mt-3.5 font-display text-hero tracking-tight leading-[0.92]">
               <span className="font-medium text-black/85 block whitespace-nowrap">Clarity reveals.</span>
-              <span className="relative inline-block font-semibold text-gold mt-0.5 whitespace-nowrap">
+              <span className="relative inline-block font-semibold text-gold-accent mt-0.5 whitespace-nowrap">
                 <span className="absolute inset-0 bg-gold/10 blur-xl rounded-full -z-10 mix-blend-multiply" aria-hidden="true" />
                 Progress begins.
               </span>
             </h1>
 
             <p className="mt-6 max-w-[340px] text-[0.9375rem] leading-[1.5] text-body/85">
-              AI solutions, practical tools, and thoughtful redevelopment built to turn ideas into progress.
+              Websites, tools, and AI experiments I&apos;ve built, and the things I&apos;m working on next.
             </p>
 
             <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center">
@@ -48,21 +48,21 @@ export function Hero() {
                 href="/work"
                 className="group inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-6 text-[0.875rem] font-semibold text-black shadow-[0_3px_10px_rgba(192,136,32,0.2),inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(192,136,32,0.35),inset_0_1px_0_rgba(255,255,255,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
               >
-                Explore Solutions
+                See what I&apos;m working on
                 <ArrowGlyph />
               </Link>
               <Link
-                href="/about"
+                href="/contact"
                 className="inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] border border-[var(--border-card)] bg-white/50 backdrop-blur-sm px-6 text-[0.875rem] font-semibold text-black/90 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/85 hover:border-gold hover:text-gold-dark hover:shadow-[0_6px_16px_rgba(192,136,32,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               >
-                Work With Us
+                Get in touch
               </Link>
             </div>
             
             {/* Trust Badge */}
             <div className="mt-6 flex flex-row items-center text-[0.75rem] font-semibold text-slate-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] whitespace-nowrap">
               <span className="flex items-center gap-1.5">
-                <MapleGlyph /> Canadian Based
+                <MapleGlyph /> Based in Gatineau, QC, Canada
               </span>
             </div>
           </div>
@@ -79,40 +79,40 @@ export function HeroMobile() {
     <section aria-labelledby="hero-heading-mobile" className="relative isolate lg:hidden pt-16 sm:pt-20">
       {/* Mobile/Tablet Fallback Stack */}
       <div className="mx-auto max-w-[var(--content-frame)] px-6 sm:px-8">
-        <div className="pt-4 pb-6 motion-safe:animate-[fade-up-in_700ms_ease-out_both]">
-          <p className="text-eyebrow font-semibold tracking-[0.2em] text-gold uppercase">
+        <div className="pt-4 pb-6 motion-safe:animate-[fade-up-in_350ms_ease-out_both]">
+          <p className="text-eyebrow font-semibold tracking-[0.2em] text-gold-dark uppercase">
             From Chaos Comes Clarity.
           </p>
           <h1 id="hero-heading-mobile" className="mt-3.5 font-display text-[2.2rem] sm:text-[2.75rem] font-semibold text-black leading-[1.05] tracking-tight">
             Clarity reveals.<br/>
-            <span className="relative inline-block text-gold mt-1">
+            <span className="relative inline-block text-gold-accent mt-1">
               <span className="absolute inset-0 bg-gold/10 blur-xl rounded-full -z-10 mix-blend-multiply" aria-hidden="true" />
               Progress begins.
             </span>
           </h1>
           <p className="mt-4 max-w-[420px] text-[0.9375rem] text-body/90 leading-[1.5]">
-            AI solutions, practical tools, and thoughtful redevelopment built to turn ideas into progress.
+            Websites, tools, and AI experiments I&apos;ve built, and the things I&apos;m working on next.
           </p>
           <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
               href="/work"
               className="group inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-6 text-[0.875rem] font-semibold text-black shadow-[0_3px_10px_rgba(192,136,32,0.2),inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(192,136,32,0.35),inset_0_1px_0_rgba(255,255,255,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
             >
-              Explore Solutions
+              See what I&apos;m working on
               <ArrowGlyph />
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] border border-[var(--border-card)] bg-white/50 backdrop-blur-sm px-6 text-[0.875rem] font-semibold text-black/90 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/85 hover:border-gold hover:text-gold-dark hover:shadow-[0_6px_16px_rgba(192,136,32,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
-              Work With Us
+              Get in touch
             </Link>
           </div>
 
           {/* Trust Badge */}
           <div className="mt-5 flex items-center text-[0.725rem] font-semibold text-slate-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
             <span className="flex items-center gap-1.5">
-              <MapleGlyph /> Canadian Based
+              <MapleGlyph /> Based in Gatineau, QC, Canada
             </span>
           </div>
         </div>
@@ -123,6 +123,7 @@ export function HeroMobile() {
             src={sceneWireframesFilled}
             alt="A figure at a multi-monitor desk, surrounded by product, website and app cards rising into a golden vortex above a sunlit city."
             placeholder="blur"
+            sizes="(max-width: 1023px) 100vw, 1px"
             fill
             className="object-cover object-[70%_25%]"
           />
@@ -171,7 +172,7 @@ export function CategoryCard({
       </div>
       <div className="pt-0.5">
         <h3 className="font-semibold text-white tracking-wide text-[0.62rem] xl:text-[0.75rem] leading-tight mb-0.5">{title}</h3>
-        <p className="text-[0.53rem] xl:text-[0.66rem] text-gray-300 font-medium leading-snug">{desc}</p>
+        <p className="text-[0.625rem] xl:text-[0.66rem] text-gray-300 font-medium leading-snug">{desc}</p>
       </div>
     </Link>
   );

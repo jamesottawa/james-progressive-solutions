@@ -4,7 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { CategoryGrid } from "@/components/home/CategoryGrid";
 
 export const metadata: Metadata = {
-  title: "Work — James Progressive Solutions",
+  title: "Work",
   description:
     "A directory of products for sale, free apps, websites, AI creations, and the CLarity build journey.",
 };

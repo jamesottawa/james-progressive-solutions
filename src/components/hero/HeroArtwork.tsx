@@ -17,12 +17,13 @@ import psEmblem from "../../../public/images/hero/ps-emblem-clean.png";
  */
 export function HeroArtwork() {
   return (
-    <div className="absolute inset-0 hidden lg:block -z-10 pointer-events-none" aria-hidden="true">
+    <div className="absolute inset-0 hidden lg:block -z-10 pointer-events-none">
       <Image
         src={sceneWireframesFilled}
-        alt=""
+        alt="A figure at a multi-monitor desk, surrounded by product, website and app cards rising into a golden vortex above a sunlit city."
         placeholder="blur"
         priority
+        sizes="(min-width: 1024px) 100vw, 1px"
         fill
         className="object-cover object-center"
       />

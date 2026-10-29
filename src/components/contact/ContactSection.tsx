@@ -18,7 +18,7 @@ export function ContactSection({
       className="scroll-mt-24 border-t border-[var(--border-card)] bg-cream-deep"
     >
       <div className="mx-auto w-full max-w-[var(--content-frame)] px-6 py-16 sm:px-8 lg:px-[50px] lg:py-20">
-        <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold uppercase">
+        <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold-dark uppercase">
           Get in Touch
         </p>
         <h2 id="contact-heading" className="mt-3 font-display text-section font-semibold text-black">

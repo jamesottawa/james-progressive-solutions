@@ -65,7 +65,8 @@
   --color-card-overlay: rgba(15, 21, 35, 0.95);
   --color-gold: #c08820;
   --color-gold-light: #e0b45c;
-  --color-gold-dark: #a8761c;
+  --color-gold-dark: #7d5610; /* AA-safe on cream (5.3:1) */
+  --color-gold-accent: #a8761c; /* large display text only (3.7:1) */
 
   --font-sans: var(--font-geist-sans);
   --font-display: var(--font-fraunces);
@@ -107,6 +108,16 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Visible keyboard focus everywhere; component-level outlines override this. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-gold-dark);
+  outline-offset: 2px;
 }
 
 body {

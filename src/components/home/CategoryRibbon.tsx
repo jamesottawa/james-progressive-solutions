@@ -60,6 +60,7 @@ export function CategoryRibbon() {
               <li key={zone.title}>
                 <Link
                   href={zone.href}
+                  title={`${zone.title}: ${zone.tagline}`}
                   className={`group relative flex items-center justify-between h-[52px] px-2.5 xl:px-3.5 transition-all duration-300 ${
                     zone.isFlagship
                       ? "bg-gold/15 hover:bg-gold/22"
@@ -83,7 +84,7 @@ export function CategoryRibbon() {
                       </span>
 
                       {zone.isFlagship ? (
-                        <span className="hidden min-[1440px]:inline-flex items-center px-1.5 py-0.5 rounded-full bg-gold/30 border border-gold/50 text-[0.48rem] font-bold tracking-[0.16em] text-gold-light uppercase shrink-0">
+                        <span className="hidden min-[1440px]:inline-flex items-center px-1.5 py-0.5 rounded-full bg-gold/30 border border-gold/50 text-[0.625rem] font-bold tracking-[0.16em] text-gold-light uppercase shrink-0">
                           Flagship
                         </span>
                       ) : (

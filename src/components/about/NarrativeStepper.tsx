@@ -246,7 +246,7 @@ export function NarrativeStepper() {
                   <span className="text-[#0B132B]">0{activeStage + 1}</span>
                   <span className="text-[#A8761C]/70"> / 03</span>
                 </span>
-                <span className="hidden lg:block text-[0.55rem] font-mono text-body/40 tracking-wider">
+                <span className="hidden lg:block text-[0.625rem] font-mono text-body/40 tracking-wider">
                   [ ← / → keys ]
                 </span>
               </div>

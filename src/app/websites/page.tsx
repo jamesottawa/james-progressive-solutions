@@ -4,7 +4,7 @@ import { PageHero } from "@/components/layout/PageHero";
 import { WebsitesCaseStudies } from "@/components/websites/WebsitesCaseStudies";
 
 export const metadata: Metadata = {
-  title: "Website Redevelopment — James Progressive Solutions",
+  title: "Website Redevelopment",
   description: "A small collection of client websites designed to make services clearer, improve trust, and give customers an easier path to get in touch.",
 };
 

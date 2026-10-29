@@ -7,6 +7,8 @@ export type ContactFormState = {
   status: "idle" | "success" | "error" | "not_connected";
   message: string;
   fieldErrors?: Partial<Record<"name" | "email" | "message", string>>;
+  /** Prefilled mailto link, offered when no delivery provider is configured. */
+  mailto?: string;
 };
 
 export const initialContactFormState: ContactFormState = {
