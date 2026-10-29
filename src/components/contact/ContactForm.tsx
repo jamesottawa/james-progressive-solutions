@@ -69,6 +69,15 @@ export function ContactForm() {
           {state.message}
         </p>
       ) : null}
+
+      {state.status === "not_connected" && state.mailto ? (
+        <a
+          href={state.mailto}
+          className="mt-4 inline-flex h-[47px] items-center rounded-[var(--radius-sm)] border border-gold-dark bg-white/70 px-6 text-[0.95rem] font-semibold text-black transition-colors duration-150 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
+        >
+          Open in my email app
+        </a>
+      ) : null}
     </form>
   );
 }

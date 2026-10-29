@@ -1,6 +1,7 @@
 "use server";
 
 import type { ContactFormState } from "@/components/contact/contact-form-state";
+import { SITE, buildMailto } from "@/lib/site";
 
 /**
  * Contact form submission handler.
@@ -57,8 +58,8 @@ export async function submitContactForm(
     });
     return {
       status: "not_connected",
-      message:
-        "Thanks for writing — but this form isn't connected to email delivery yet, so your message was not sent. Please try again later, once a way to reach James directly is added here.",
+      message: `Thanks for writing. This form can't send email just yet, so your message has not been sent. You can send it straight to ${SITE.email} instead — the button below opens your email app with everything filled in.`,
+      mailto: buildMailto(name, message),
     };
   }
 

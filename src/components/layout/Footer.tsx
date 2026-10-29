@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { primaryNavItems } from "@/data/navigation";
+import { SITE } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -94,14 +95,20 @@ export function Footer() {
               Get In Touch
             </h4>
             <p className="text-[0.8rem] text-gray-300 leading-normal">
-              Interested in collaborating, redeveloping a website, or learning more about active projects?
+              Curious about a project, or want to talk about a website or tool? Say hi.
             </p>
+            <a
+              href={`mailto:${SITE.email}`}
+              className="w-fit text-[0.8rem] font-medium text-gold-light underline underline-offset-4 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
+            >
+              {SITE.email}
+            </a>
             <div className="pt-0.5">
               <Link
-                href="/about"
+                href="/contact"
                 className="group inline-flex h-[36px] items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-4 text-[0.8rem] font-bold text-black shadow-md transition-all duration-200 hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-gold"
               >
-                Work With Us
+                Get in touch
                 <svg className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>

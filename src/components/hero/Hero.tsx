@@ -52,10 +52,10 @@ export function Hero() {
                 <ArrowGlyph />
               </Link>
               <Link
-                href="/about"
+                href="/contact"
                 className="inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] border border-[var(--border-card)] bg-white/50 backdrop-blur-sm px-6 text-[0.875rem] font-semibold text-black/90 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/85 hover:border-gold hover:text-gold-dark hover:shadow-[0_6px_16px_rgba(192,136,32,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
               >
-                Work With Us
+                Get in touch
               </Link>
             </div>
             
@@ -102,10 +102,10 @@ export function HeroMobile() {
               <ArrowGlyph />
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] border border-[var(--border-card)] bg-white/50 backdrop-blur-sm px-6 text-[0.875rem] font-semibold text-black/90 shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-white/85 hover:border-gold hover:text-gold-dark hover:shadow-[0_6px_16px_rgba(192,136,32,0.12)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
-              Work With Us
+              Get in touch
             </Link>
           </div>
 
