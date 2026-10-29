@@ -123,6 +123,7 @@ export function HeroMobile() {
             src={sceneWireframesFilled}
             alt="A figure at a multi-monitor desk, surrounded by product, website and app cards rising into a golden vortex above a sunlit city."
             placeholder="blur"
+            sizes="(max-width: 1023px) 100vw, 1px"
             fill
             className="object-cover object-[70%_25%]"
           />

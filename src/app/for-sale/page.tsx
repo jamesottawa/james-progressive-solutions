@@ -5,7 +5,7 @@ import { CollectionGrid } from "@/components/collections/CollectionGrid";
 import { forSaleItems } from "@/data/collections";
 
 export const metadata: Metadata = {
-  title: "For Sale — James Progressive Solutions",
+  title: "For Sale",
   description: "Premium digital products built to save time, scale faster, and deliver results.",
 };
 

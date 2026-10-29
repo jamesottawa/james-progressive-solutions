@@ -5,7 +5,7 @@ import { FreeAppsCatalog } from "@/components/free-apps/FreeAppsCatalog";
 import { getFreeApps } from "@/data/freeApps";
 
 export const metadata: Metadata = {
-  title: "Free Apps & Tools — James Progressive Solutions",
+  title: "Free Apps & Tools",
   description: "Small, practical software tools and focused utilities built in the workshop and released freely.",
 };
 

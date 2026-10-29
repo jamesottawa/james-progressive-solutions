@@ -120,7 +120,7 @@ export function Footer() {
 
         {/* Bottom Copyright Bar */}
         <div className="mt-8 pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-[0.725rem] text-gray-400">
-          <p>© {new Date().getFullYear()} James Progressive Solutions. Built in public.</p>
+          <p>© {new Date().getFullYear()} James Progressive Solutions. Built in public. <Link href="/privacy" className="underline underline-offset-2 hover:text-gold-light">Privacy</Link></p>
           <p className="text-gray-400">From chaos comes clarity.</p>
         </div>
       </div>

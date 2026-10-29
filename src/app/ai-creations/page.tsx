@@ -5,7 +5,7 @@ import { CollectionGrid } from "@/components/collections/CollectionGrid";
 import { aiCreationItems } from "@/data/collections";
 
 export const metadata: Metadata = {
-  title: "AI Creations — James Progressive Solutions",
+  title: "AI Creations",
   description: "Intelligent solutions designed to automate, generate, and elevate.",
 };
 

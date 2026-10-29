@@ -4,7 +4,7 @@ import { AboutHeroIndex } from "@/components/about/AboutHeroIndex";
 import { AboutPageContent } from "@/components/about/AboutPageContent";
 
 export const metadata: Metadata = {
-  title: "About — James Progressive Solutions",
+  title: "About",
   description: "James Progressive Solutions is a small, hands-on digital workshop focused on practical websites, web apps, AI experiments, and the ongoing development of CLarity.",
 };
 
