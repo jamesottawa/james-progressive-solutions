@@ -19,7 +19,7 @@ export function PageHero({
 }) {
   return (
     <section className="border-b border-[var(--border-card)]">
-      <div className="mx-auto w-full max-w-[var(--content-frame)] px-6 py-16 sm:px-8 lg:px-[50px] lg:py-20">
+      <div className="mx-auto w-full max-w-[var(--content-frame)] px-6 py-10 sm:px-8 lg:px-[50px] lg:py-12">
         <div className="max-w-[700px] motion-safe:animate-[fade-up-in_600ms_ease-out_both]">
           <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold-dark uppercase">
             {eyebrow}

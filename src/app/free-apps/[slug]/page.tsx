@@ -21,12 +21,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   if (!app) {
     return {
-      title: "App Not Found — James Progressive Solutions",
+      title: "App Not Found",
     };
   }
 
   return {
-    title: `${app.title} — Free Apps — James Progressive Solutions`,
+    title: `${app.title} | Free Apps`,
     description: app.shortDescription,
   };
 }
