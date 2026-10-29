@@ -129,7 +129,7 @@ export function AboutPageContent() {
         <div className="mx-auto max-w-[var(--content-frame)] px-6 sm:px-8 lg:px-[50px] space-y-10">
           
           <div className="max-w-2xl space-y-3">
-            <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold uppercase">
+            <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold-dark uppercase">
               Core Principles
             </p>
             <h2 className="font-display text-2xl sm:text-3xl lg:text-4xl font-semibold text-black tracking-tight">

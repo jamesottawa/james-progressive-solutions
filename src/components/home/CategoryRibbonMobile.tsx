@@ -82,7 +82,7 @@ export function CategoryRibbonMobile() {
             </span>
 
             {zone.isFlagship && (
-              <span className="px-1.5 py-0.5 rounded-full bg-gold/30 border border-gold/50 text-[0.5rem] font-bold tracking-widest text-gold-light uppercase leading-none">
+              <span className="px-1.5 py-0.5 rounded-full bg-gold/30 border border-gold/50 text-[0.625rem] font-bold tracking-widest text-gold-light uppercase leading-none">
                 Flagship
               </span>
             )}

@@ -24,12 +24,12 @@ export default function AboutPage() {
 
             {/* Left: headline block (7 cols) */}
             <div className="lg:col-span-7 space-y-5 motion-safe:animate-[fade-up-in_600ms_ease-out_both]">
-              <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold uppercase">
+              <p className="text-eyebrow font-semibold tracking-[0.19em] text-gold-dark uppercase">
                 About
               </p>
               <h1 className="font-display text-[clamp(1.95rem,2.6vw+1rem,3.25rem)] leading-[1.08] font-semibold text-black">
                 Built around{" "}
-                <span className="text-gold">solving problems.</span>
+                <span className="text-gold-accent">solving problems.</span>
               </h1>
               <p className="max-w-[520px] text-lead text-body">
                 James Progressive Solutions is a small, hands-on digital workshop focused on practical websites, web apps, AI experiments, and the ongoing development of CLarity.

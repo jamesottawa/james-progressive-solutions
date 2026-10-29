@@ -114,7 +114,7 @@ export function FeaturedWork() {
                   <span className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-gold-light/85">
                     WEBSITES
                   </span>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.55rem] font-bold tracking-[0.16em] uppercase border bg-white/10 border-white/20 text-gray-300">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.625rem] font-bold tracking-[0.16em] uppercase border bg-white/10 border-white/20 text-gray-300">
                     ACTIVE
                   </span>
                 </div>
@@ -157,7 +157,7 @@ export function FeaturedWork() {
                   <span className="text-[0.68rem] font-bold uppercase tracking-[0.2em] text-gray-400">
                     APPLICATIONS
                   </span>
-                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.55rem] font-bold tracking-[0.16em] uppercase border bg-white/5 border-white/15 text-gray-400">
+                  <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[0.625rem] font-bold tracking-[0.16em] uppercase border bg-white/5 border-white/15 text-gray-400">
                     5 LIVE APPS
                   </span>
                 </div>

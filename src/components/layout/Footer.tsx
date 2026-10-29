@@ -24,7 +24,7 @@ export function Footer() {
                 <span className="font-display text-[1.05rem] font-bold tracking-wider text-white uppercase transition-colors duration-200 group-hover:text-gold-light">
                   JAMES
                 </span>
-                <span className="mt-0.5 text-[0.48rem] font-bold tracking-[0.26em] text-gold-light/90 uppercase">
+                <span className="mt-0.5 text-[0.625rem] font-bold tracking-[0.26em] text-gold-light/90 uppercase">
                   PROGRESSIVE SOLUTIONS
                 </span>
               </span>
