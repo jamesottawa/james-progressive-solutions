@@ -5,6 +5,7 @@ import {
   LogoGlyph, 
   ScreenGlyph 
 } from "@/components/hero/Hero";
+import { freeApps } from "@/data/freeApps";
 import clarityPanelTexture from "../../../public/images/clarity/clarity-panel-texture.png";
 
 export function FeaturedWork() {
@@ -173,6 +174,17 @@ export function FeaturedWork() {
                 <p className="text-[0.875rem] text-gray-300 font-normal leading-relaxed mb-6">
                   Practical, focused tools built to solve everyday productivity and operational challenges.
                 </p>
+
+                <ul className="mb-6 flex flex-wrap gap-2" aria-label="Apps">
+                  {freeApps.map((app) => (
+                    <li
+                      key={app.slug}
+                      className="rounded border border-white/15 bg-white/5 px-2 py-1 text-[0.68rem] font-medium tracking-wide text-gray-200 capitalize"
+                    >
+                      {app.title.toLowerCase()}
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <div className="pt-4 border-t border-white/10 flex items-center gap-2 text-[0.825rem] font-semibold text-gold-light">

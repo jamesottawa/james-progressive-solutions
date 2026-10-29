@@ -60,6 +60,7 @@ export function CategoryRibbon() {
               <li key={zone.title}>
                 <Link
                   href={zone.href}
+                  title={`${zone.title}: ${zone.tagline}`}
                   className={`group relative flex items-center justify-between h-[52px] px-2.5 xl:px-3.5 transition-all duration-300 ${
                     zone.isFlagship
                       ? "bg-gold/15 hover:bg-gold/22"

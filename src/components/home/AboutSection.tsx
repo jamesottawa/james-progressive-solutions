@@ -44,9 +44,9 @@ export function AboutSection() {
           {/* Right Column: Paragraph with Editorial Vertical Divider */}
           <div className="lg:col-span-7 lg:pl-10 lg:border-l lg:border-gold/25 flex flex-col justify-center">
             <p className="text-[1.05rem] sm:text-[1.125rem] text-body/90 leading-relaxed font-normal">
-              James Progressive Solutions is where James shares the products, apps, websites, and AI
-              experiments he is building, including the ongoing CLarity project. It is a running
-              account of the work as it happens, not a finished portfolio.
+              This is where I share the products, apps, websites, and AI experiments I&apos;m building,
+              including the ongoing CLarity project. It&apos;s a running log of the work: finished
+              things sit next to works in progress, and new projects show up here as they happen.
             </p>
           </div>
         </div>

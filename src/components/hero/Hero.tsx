@@ -40,7 +40,7 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 max-w-[340px] text-[0.9375rem] leading-[1.5] text-body/85">
-              AI solutions, practical tools, and thoughtful redevelopment built to turn ideas into progress.
+              Websites, tools, and AI experiments I&apos;ve built, and the things I&apos;m working on next.
             </p>
 
             <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center">
@@ -48,7 +48,7 @@ export function Hero() {
                 href="/work"
                 className="group inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-6 text-[0.875rem] font-semibold text-black shadow-[0_3px_10px_rgba(192,136,32,0.2),inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(192,136,32,0.35),inset_0_1px_0_rgba(255,255,255,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
               >
-                Explore Solutions
+                See what I&apos;m working on
                 <ArrowGlyph />
               </Link>
               <Link
@@ -62,7 +62,7 @@ export function Hero() {
             {/* Trust Badge */}
             <div className="mt-6 flex flex-row items-center text-[0.75rem] font-semibold text-slate-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)] whitespace-nowrap">
               <span className="flex items-center gap-1.5">
-                <MapleGlyph /> Canadian Based
+                <MapleGlyph /> Based in Gatineau, QC, Canada
               </span>
             </div>
           </div>
@@ -91,14 +91,14 @@ export function HeroMobile() {
             </span>
           </h1>
           <p className="mt-4 max-w-[420px] text-[0.9375rem] text-body/90 leading-[1.5]">
-            AI solutions, practical tools, and thoughtful redevelopment built to turn ideas into progress.
+            Websites, tools, and AI experiments I&apos;ve built, and the things I&apos;m working on next.
           </p>
           <div className="mt-7 flex flex-col gap-3.5 sm:flex-row sm:items-center">
             <Link
               href="/work"
               className="group inline-flex h-[48px] whitespace-nowrap items-center justify-center gap-2 rounded-[var(--radius-md)] bg-[linear-gradient(180deg,var(--gold-grad-from),var(--gold-grad-to))] px-6 text-[0.875rem] font-semibold text-black shadow-[0_3px_10px_rgba(192,136,32,0.2),inset_0_1px_0_rgba(255,255,255,0.3)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_6px_16px_rgba(192,136,32,0.35),inset_0_1px_0_rgba(255,255,255,0.4)] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-dark"
             >
-              Explore Solutions
+              See what I&apos;m working on
               <ArrowGlyph />
             </Link>
             <Link
@@ -112,7 +112,7 @@ export function HeroMobile() {
           {/* Trust Badge */}
           <div className="mt-5 flex items-center text-[0.725rem] font-semibold text-slate-900 drop-shadow-[0_1px_2px_rgba(255,255,255,0.8)]">
             <span className="flex items-center gap-1.5">
-              <MapleGlyph /> Canadian Based
+              <MapleGlyph /> Based in Gatineau, QC, Canada
             </span>
           </div>
         </div>
