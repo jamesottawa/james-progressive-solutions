@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { FreeApp } from "@/data/freeApps";
-import { ProjectBoardShowcase } from "@/components/free-apps/ProjectBoardShowcase";
-import { InteractiveWorkshopBrowser } from "@/components/free-apps/InteractiveWorkshopBrowser";
 
 function formatAppDisplayTitle(slug: string, rawTitle: string): string {
   if (slug === "from-chaos-to-clear") return "From Chaos to Clear";
@@ -34,16 +32,13 @@ function getAppStatusBadge(app: FreeApp): { label: string; style: string } {
 /**
  * FreeAppsCatalog
  *
- * Authored digital workshop showcase for /free-apps:
- * 1. Application Directory: Exposes all 5 real tools with live launch links and detail views
- * 2. Primary Featured Artifact: Deep-dive showcase of Project Board with interactive preview
- * 3. Active Exploration Tracks: Interactive workshop browser for ongoing research areas
+ * Application directory for /free-apps: every real tool with a live launch link and
+ * a detail page. The Project Board deep-dive and exploration tracks were removed
+ * to keep the page short; each app still has its own detail page.
  */
 export function FreeAppsCatalog({ apps }: { apps: FreeApp[] }) {
-  const projectBoard = apps.find((app) => app.slug === "project-board") || apps[0];
-
   return (
-    <div className="space-y-14 sm:space-y-18 lg:space-y-20">
+    <div className="space-y-8">
       {/* ── ACT 1: COMPLETE FIVE-APP WORKSHOP DIRECTORY ───────────────────────── */}
       <section aria-labelledby="apps-directory-heading" className="space-y-6">
         {/* Section Header */}
@@ -144,15 +139,6 @@ export function FreeAppsCatalog({ apps }: { apps: FreeApp[] }) {
         </div>
       </section>
 
-      {/* ── ACT 2: PRIMARY FEATURED ARTIFACT (PROJECT BOARD DEEP-DIVE) ─────────── */}
-      <div id="featured-project-board" className="pt-4">
-        {projectBoard && <ProjectBoardShowcase app={projectBoard} />}
-      </div>
-
-      {/* ── ACT 3: ACTIVE WORKSHOP EXPLORATION TRACKS ────────────────────────── */}
-      <div className="pt-4">
-        <InteractiveWorkshopBrowser />
-      </div>
     </div>
   );
 }
